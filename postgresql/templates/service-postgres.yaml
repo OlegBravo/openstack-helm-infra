@@ -26,5 +26,5 @@ spec:
     - name: postgresql
       port: {{ tuple "postgresql" "internal" "postgresql" . | include "helm-toolkit.endpoints.endpoint_port_lookup" }}
   selector:
-  {{ tuple $envAll "postgresql" "server" | include "helm-toolkit.snippets.kubernetes_metadata_labels" | indent 8 }}
+{{ tuple $envAll "postgresql" "server" | include "helm-toolkit.snippets.kubernetes_metadata_labels" | indent 8 }}
 {{- end }}

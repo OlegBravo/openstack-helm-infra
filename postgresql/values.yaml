@@ -303,6 +303,7 @@ conf:
         log_lock_waits: 'on'
         log_temp_files: 0
         log_timezone: 'UTC'
+        default_transaction_read_only = off
         max_connections: {{ .Values.conf.postgresql.max_connections }}
         max_replication_slots: 10
         max_wal_senders: 10

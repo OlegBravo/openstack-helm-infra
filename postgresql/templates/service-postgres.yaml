@@ -22,6 +22,7 @@ kind: Service
 metadata:
   name: {{ tuple "postgresql" "internal" . | include "helm-toolkit.endpoints.hostname_short_endpoint_lookup" }}
 spec:
+  clusterIP: None
   ports:
     - name: postgresql
       port: {{ tuple "postgresql" "internal" "postgresql" . | include "helm-toolkit.endpoints.endpoint_port_lookup" }}
